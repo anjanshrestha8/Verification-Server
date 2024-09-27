@@ -5,7 +5,7 @@ const PORT = 8000;
 app.use(express.json());
 app.use(cors());
 
-app.get("/", () => {
+app.get("/", (request,response) => {
   return response.send("Api is working.....");
 });
 app.post("/", (request, response) => {
