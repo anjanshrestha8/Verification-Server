@@ -5,6 +5,9 @@ const PORT = 8000;
 app.use(express.json());
 app.use(cors());
 
+app.get("/", () => {
+  return response.send("Api is working.....");
+});
 app.post("/", (request, response) => {
   const code = request.body.code;
   if (code.length !== 6 || code[5] === "7") {
